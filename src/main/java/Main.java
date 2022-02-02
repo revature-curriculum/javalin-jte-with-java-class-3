@@ -7,13 +7,20 @@ public class Main {
 
     static ArrayList<Table> tables = new ArrayList<>();
 
+    // TO-DO create array for your new class
+
     public static void main(String[] args) {
 
+      // Adding tables to the tables array
         tables.add(new Table(1, 75));
         tables.add(new Table(2, 25));
         tables.add(new Table(3, 0));
         tables.add(new Table(4, 60));
         
+      // TO-DO add to your new array
+
+
+
         Javalin app = Javalin.create().start(4100);
 
         app.get("/", ctx -> ctx.render("index.jte"));
@@ -21,6 +28,8 @@ public class Main {
         app.get("/waiter", waiterHandler);
 
         app.get("/timeSkip", timeSkipHandler);
+
+        // TO-DO add routes
 
     }
 
@@ -39,6 +48,8 @@ public class Main {
         ctx.render("timeSkip.jte");
 
     };
+
+    // TO-DO create handlers
 
 
 
