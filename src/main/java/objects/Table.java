@@ -26,6 +26,15 @@ public class Table {
         return tableNumber;
     }
 
+    public void timeSkip(){
+        if (waterLevel < 15){
+            waterLevel = 0;
+        }
+        else {
+            waterLevel -= 15;
+        }
+    }
+
 
     
 }

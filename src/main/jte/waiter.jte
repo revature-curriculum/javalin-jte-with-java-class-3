@@ -26,6 +26,9 @@
     </li>
     @endfor
 
+
+    <a href="/timeSkip">Fast Forward 10 Minutes</a>
+    <br>
     <a href="/">Back</a>
 
 </body>

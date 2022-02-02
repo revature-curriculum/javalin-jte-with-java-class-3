@@ -20,11 +20,23 @@ public class Main {
 
         app.get("/waiter", waiterHandler);
 
+        app.get("/timeSkip", timeSkipHandler);
+
     }
 
     public static Handler waiterHandler = ctx -> {
         
         ctx.render("waiter.jte", Collections.singletonMap("tables", tables));
+
+    };
+
+    public static Handler timeSkipHandler = ctx -> {
+
+        for (Table table : tables){
+            table.timeSkip();
+        }
+        
+        ctx.render("timeSkip.jte");
 
     };
 
