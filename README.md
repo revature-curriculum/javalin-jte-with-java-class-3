@@ -1,7 +1,7 @@
 ## Javalin JTE with Java Class 3
 ---
 ### Description
-In this lab we will cover how to iterate through an ArrayList of Java Objects using JTE. While iterating through the list, we will also cover using condtional statements and method calls. For reference, please look at the table implementation.
+In this lab we will cover how to iterate through an ArrayList of Java Objects using JTE. While iterating through the list, we will also cover using conditional statements and method calls. For reference, please look at the table implementation.
 
 ---
 ### Steps
