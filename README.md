@@ -1,4 +1,4 @@
-## JTE with Java Classes 4: Method Calls 
+## JTE with Java Classes 4: Method Calls Answer
 ---
 ### Description
 In this lab we will cover how to iterate through an ArrayList of Java Objects using JTE. While iterating through the list, we will also cover using conditional statements and method calls. For reference, please look at the table implementation.
@@ -18,6 +18,8 @@ In this lab we will cover how to iterate through an ArrayList of Java Objects us
 8. In src -> main -> jte, add your implementation in the timeSkipSeaCreature.jte file where you'll display a certain amount of time pass by and have a link set to the seaCreature.jte.
 ---
 ### Sample Output
+In my vast pen for sea creatures
+
 * Blue Whales are hungry...*feeding...now they're full!
 * Starfish are full
 * Anglerfish are full

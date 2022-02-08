@@ -1,4 +1,4 @@
-## JTE with Java Classes 4: Method Calls 
+## JTE with Java Classes 4: Method Calls Answer
 ---
 ### Description
 In this lab we will cover how to iterate through an ArrayList of Java Objects using JTE. While iterating through the list, we will also cover using conditional statements and method calls. For reference, please look at the table implementation.

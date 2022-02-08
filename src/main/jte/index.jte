@@ -6,6 +6,7 @@
 <body>
 
 <a href="/waiter">Waiter</a>
+<a href="/seaCreature">Sea Creature</a>
 
 </body>
 </html>

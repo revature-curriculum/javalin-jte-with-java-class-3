@@ -2,34 +2,40 @@ import io.javalin.Javalin;
 import java.util.*;
 import io.javalin.http.Handler;
 import objects.Table;
+import objects.SeaCreature;
 
 public class Main {
 
     static ArrayList<Table> tables = new ArrayList<>();
 
-    // TO-DO create array for your new class
+    static ArrayList<SeaCreature> seaCreatures = new ArrayList<>();
 
     public static void main(String[] args) {
 
       // Adding tables to the tables array
-        tables.add(new Table(1, 75));
-        tables.add(new Table(2, 25));
-        tables.add(new Table(3, 0));
-        tables.add(new Table(4, 60));
+      tables.add(new Table(1, 75));
+      tables.add(new Table(2, 25));
+      tables.add(new Table(3, 0));
+      tables.add(new Table(4, 60));
         
-      // TO-DO add to your new array
+      seaCreatures.add(new SeaCreature("Blobfish", 90, 22));
+      seaCreatures.add(new SeaCreature("Sea Angel", 75, 5));
+      seaCreatures.add(new SeaCreature("Peacock Mantis Shrimp", 55, 15));
+      seaCreatures.add(new SeaCreature("Firefly Squid", 80, 75));
 
 
 
-        Javalin app = Javalin.create().start(4100);
+      Javalin app = Javalin.create().start(4100);
 
-        app.get("/", ctx -> ctx.render("index.jte"));
+      app.get("/", ctx -> ctx.render("index.jte"));
 
-        app.get("/waiter", waiterHandler);
+      app.get("/waiter", waiterHandler);
 
-        app.get("/timeSkip", timeSkipHandler);
+      app.get("/timeSkip", timeSkipHandler);
 
-        // TO-DO add routes
+      app.get("/seaCreature", scHandler);
+
+      app.get("/timeSkipSeaCreature", sctsHandler);
 
     }
 
@@ -49,7 +55,21 @@ public class Main {
 
     };
 
-    // TO-DO create handlers
+    public static Handler scHandler = ctx -> {
+        
+        ctx.render("seaCreature.jte", Collections.singletonMap("seaCreatures", seaCreatures));
+
+    };
+
+    public static Handler sctsHandler = ctx -> {
+
+        for (SeaCreature sc : seaCreatures){
+            sc.timeSkip();
+        }
+        
+        ctx.render("timeSkipSeaCreature.jte");
+
+    };
 
 
 
