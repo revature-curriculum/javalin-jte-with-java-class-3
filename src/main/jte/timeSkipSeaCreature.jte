@@ -6,7 +6,7 @@
 <body>
 
     1 hour goes by...
-    <a href="/seaCreature">Check Sea Creatures' Hunger Level Again</a>
+    <a href="/seaCreatures">Check Sea Creatures' Hunger Level Again</a>
 
 </body>
 </html>

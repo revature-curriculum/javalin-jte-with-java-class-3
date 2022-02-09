@@ -33,7 +33,7 @@ public class Main {
 
       app.get("/timeSkip", timeSkipHandler);
 
-      app.get("/seaCreature", scHandler);
+      app.get("/seaCreatures", scHandler);
 
       app.get("/timeSkipSeaCreature", sctsHandler);
 
@@ -57,7 +57,7 @@ public class Main {
 
     public static Handler scHandler = ctx -> {
         
-        ctx.render("seaCreature.jte", Collections.singletonMap("seaCreatures", seaCreatures));
+        ctx.render("seaCreatures.jte", Collections.singletonMap("seaCreatures", seaCreatures));
 
     };
 
