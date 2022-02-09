@@ -15,11 +15,11 @@
     <li>
         The hunger for ${sc.getName()} is ${sc.getHungerLevel()} and 
         @if(sc.needFeed())
-            needs feeding!
+            they need feeding!
             ${sc.feed()}
             They are full now.
         @else
-            doesn't need feeding yet.
+            they don't need feeding yet.
         @endif
     </li>
     @endfor
