@@ -7,7 +7,7 @@ In this lab we will cover how to iterate through an ArrayList of Java Objects us
 ### Steps
 
 1. In src -> main -> java -> objects, add your fields and getters to your SeaCreature.java file. Make sure to have at least 3 fields in this file. 
-2. In the same file, create a feed method, a needFeed() method and a timeSkip method.
+2. In the same file, create a feed method, a needFeed method and a timeSkip method.
 3. In src -> main -> java -> Main.java, create an ArrayList of SeaCreature objects. Add at least 4 SeaCreature objects to your list.
 4. In the same file, create a new route and handler for your list of SeaCreature objects.
 5. In src -> main -> jte, add your implementation in the seaCreature.jte file where you will iterate through your list with a for loop. Make sure to add the imports and parameters required. Add your for loop inside the body tag. Add one link that will be set to the index.jte. as your return link and another link that will be set to your timeSkipSeaCreature.jte
