@@ -6,16 +6,29 @@ In this lab we will cover how to iterate through an ArrayList of Java Objects us
 ---
 ### Steps
 
-1. In src -> main -> java -> objects, add your fields and getters to your SeaCreature.java file. Make sure to have at least 3 fields in this file. 
-2. In the same file, create a feed method, a needFeed method and a timeSkip method.
-3. In src -> main -> java -> Main.java, create an ArrayList of SeaCreature objects. Add at least 4 SeaCreature objects to your list.
-4. In the same file, create a new route and handler for your list of SeaCreature objects.
-5. In src -> main -> jte, add your implementation in the seaCreatures.jte file where you will iterate through your list with a for loop. Make sure to add the imports and parameters required. Add your for loop inside the body tag. Add one link that will be set to the index.jte. as your return link and another link that will be set to your timeSkipSeaCreature.jte
-6. Within your for loop, add a conditional statement with conditions based on the SeaCreature's hunger:
-* if the SeaCreature is hungry, then have the webpage display that it's hungry, feed the SeaCreature and display that it's full now
-* else, then have the webpage display the SeaCreature is full
-7. In src -> main -> java -> Main.java, create another route and handler for your timeSkip.
-8. In src -> main -> jte, add your implementation in the timeSkipSeaCreature.jte file where you'll display a certain amount of time pass by and have a link set to the seaCreature.jte.
+1. In src -> main -> java -> objects -> SeaCreature.java add at least two fields. One should be the name of the animal (string), and another the hunger of the animal (int - 0 is starving and 100 is full). You can add more if you want.
+2. Create a constructor for the class.
+3. Create getters for all the fields. These getters should be public so other files can access them.
+4. Create a feed method that will set the value of hunger to 100 (full).
+5. Create a timeSkip method that will decrease the hunger by a set amount (or set the hunger to 0 if hunger is lower than the set amount).
+6. In src -> main -> java -> Main.java, create an ArrayList of SeaCreature objects. This arraylist should be static and be created outside the main method.
+7. Add at least 4 SeaCreature objects to your list. This should be done in the main method. See the ShoppingItems reference example in the same file.
+8. Create a handler that will render seaCreatures.jte and send it your list of SeaCreature objects.
+9. Create a route for the handler.
+10. Create a handler that will render timeSkipSeaCreature.jte and call the timeSkip method for all sea creatures in the arraylist.
+11. Create a route for the timeSkipSeaCreature that will render timeSkipSeaCreature.jte.
+12. In src -> main -> jte -> seaCreatures.jte add the required imports and parameters.
+    * Remember to import java.util.* for the arraylist.
+    * Remember to use the same name for the parameter and the key for the singletonMap.
+13. Add one link that will return to the index page (the default route for this is "/")
+14. Create another link that will be set to your timeSkipSeaCreature.jte route.
+15. Create a for loop inside the body tags. This for loop should iterate through all the sea creatures.
+16. Within your for loop, add a conditional statement with conditions based on the SeaCreature's hunger:
+    * If the SeaCreature is hungry, then have the webpage display that it's hungry, feed the SeaCreature (this can be done using ${seaCreature.feed()} and display that it's full now
+    * else, then have the webpage display the SeaCreature is not hungry.
+    * Note: The sea creature hunger can be checked using ${seaCreature.getHunger()}. You can put this into an if statement and check if the hunger is lower than a certain threshold (that you will decide).
+17. In src -> main -> jte -> timeSkipSeaCreature.jte file write text to display a certain amount of time pass by
+18. Create a link set to the seaCreature.jte route to check if any sea creature is hungry after the time skip.
 ---
 ### Sample Output
 In my vast pen for sea creatures
